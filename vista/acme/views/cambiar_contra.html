@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ACME| Forgot Password</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
+  <!-- icheck bootstrap -->
+  <link rel="stylesheet" href="../plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+</head>
+<body class="hold-transition login-page">
+<div class="login-box">
+  <!-- /.login-logo -->
+  <div class="card card-outline card-primary card-ground">
+    <div class="card-header text-center">
+      <img class="logologin" src="../dist/img/logo.png" alt="logo" width="100" height="100"><br>
+      <a href="../acmefront/index.html" class="h1"><b>ACME</b></a>
+    </div>
+    <div class="card-body">
+      <p class="login-box-msg">¿Haz olvidado tu contraseña?<br>Ingresa a continuación tu correro electrónico y te la enviaremos.</p>
+      <form id="quickForm">
+        <div class="card-body">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Código actual</label>
+            <input type="password" name="contraseñaOld" class="form-control" id="exampleInputEmail1" placeholder="*******" minlength="7" maxlength="7">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Contraseña nueva</label>
+            <input type="password" name="contraseñaN" class="form-control" id="exampleInputPassword1" placeholder="*******" minlength="7" maxlength="7">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Contraseña nuevamente</label>
+            <input type="password" name="contraseñaN2" class="form-control" id="exampleInputPassword1" placeholder="*******" minlength="7" maxlength="7">
+          </div>
+        </div>
+        <!-- /.card-body -->
+        <div class="row">
+          <!-- /.col -->
+          <div class="col-12">
+           <button type="submit" class="btn btn-primary">Cambiar</button>
+           <a href="../views/perfil.html" type="button" class="btn btn-secondary">Cancelar</a>
+          </div>
+        </div>
+         
+      </form>
+    </div>
+    <!-- /.card-body -->
+  </div>
+  <!-- /.card -->
+</div>
+<!-- /.login-box -->
+
+<!-- jQuery -->
+<script src="../plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../dist/js/adminlte.min.js"></script>
+<!-- jquery-validation -->
+<script src="../plugins/jquery-validation/jquery.validate.min.js"></script>
+<script src="../plugins/jquery-validation/additional-methods.min.js"></script>
+
+<!-- Page specific script -->
+<script>
+  $(function () {
+    $.validator.setDefaults({
+      submitHandler: function () {
+        alert( "Contraseña cambiada correctamenta" );
+        window.location.href = "./password-changed.html";
+        }
+    });
+    $('#quickForm').validate({
+      rules: {
+        contraseñaOld: {
+          required: true,
+          //codigo: true,
+        },
+        contraseñaN: {
+          required: true,
+          minlength: 5
+        },
+          contraseñaN2: {
+          required: true,
+          maxlength: 7
+        },
+      },
+      messages: {
+        contraseñaOld: {
+          required: "Por favor, ingrese su contraseña",
+          maxlength: "Por favor, ingrese una contraseña valida",
+          minlength: "Su contraseña debe ser de 7 dígitos"
+        },
+        contraseñaN: {
+          required: "Por favor, ingrese su contraseña",
+          minlength: "Por favor, ingrese una contraseña valida"
+      },
+        contraseñaN2: {
+          required: "Por favor, ingrese su contraseña nuevamente",
+          minlength: "Por favor, ingrese una contraseña valida"
+      },
+    },
+      errorElement: 'span',
+      errorPlacement: function (error, element) {
+        error.addClass('invalid-feedback');
+        element.closest('.form-group').append(error);
+      },
+      highlight: function (element, errorClass, validClass) {
+        $(element).addClass('is-invalid');
+      },
+      unhighlight: function (element, errorClass, validClass) {
+        $(element).removeClass('is-invalid');
+      }
+    });
+  });
+
+  </script>   
+</body>
+</html>

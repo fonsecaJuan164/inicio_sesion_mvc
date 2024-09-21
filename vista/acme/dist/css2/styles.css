@@ -1,0 +1,472 @@
+
+body {
+  background-color: black;
+}
+
+
+/* CAJA CENTRAL*/
+.container-caja {
+  display: flex;
+  width: 875px;
+  height: 589px;
+  background-color: rgb(237, 237, 237);
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  position:absolute;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.superior {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 28.3%;
+  background-color: rgb(237, 237, 237);
+  text-align: center;
+  line-height: 50px;
+}
+
+.inferior {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 71.7%;
+  background-color: rgb(237, 237, 237);
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  align-items: center;
+
+}
+
+/* /////// CAJAS DE LA CABECERA ////////*/
+
+.title{
+  position:absolute;
+  background-color: rgb(237, 237, 237);
+  width: 542px;
+  height: 57.3%;
+  right: 50%;
+  border-bottom: 5px solid rgb(237, 178, 59);
+  transform: translate(50%, 5%);
+}
+
+.title-tex{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 650;
+  font-size: 35px;
+  position: relative;
+  margin: 0;
+  top: 50%;
+  transform: translate(0%, -50%);
+  color: rgb(51, 49, 50);
+  line-height: 1.2;
+}
+
+.subtitle{
+  position:absolute;
+  background-color: rgb(237, 237, 237);
+  width: 542px;
+  height: 40.5%;
+  right: 50%;
+  bottom: 0;
+  transform: translate(50%);
+}
+
+.subt-tex{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 650;
+  font-size: 35px;
+  position: relative;
+  margin: 0;
+  top: 50%;
+  transform: translate(0%, -65%);
+  color: rgb(45, 80, 108);
+  margin-top: 10px;
+}
+
+.logo{
+  position:absolute;
+  background-color: rgb(237, 237, 237);
+  width: 167px;
+  height: 100%;
+  left: 0;
+  display: inline-block;
+}
+
+.imagen{
+  position:absolute;
+  width: 112%;
+  height: 113%;
+  right: -25px;
+  top: 51%;
+  transform: translate(0%, -50%);
+}
+
+.ge2{
+  position:absolute;
+  background-color: rgb(237, 237, 237);  color: rgb(51, 49, 50);
+  width: 167px;
+  height: 100%;
+  right: 0;
+}
+
+.ge2-tex{
+  text-align: center;
+  font-size: 25px;
+  color: rgb(237, 237, 237);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: -1px -1px 0 #005a9c,
+              1px -1px 0 #005a9c,
+              -1px 1px 0 #005a9c,
+              1px 1px 0 #005a9c;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1;
+  transform: translate(0%, 50%);
+} 
+
+/* /////// CAJAS DE LOS CANDIDATOS ////////*/
+
+.cajas {
+  width: calc(84.5% - 15px);
+  height: 191px;
+  background-color: rgb(255, 255, 255);
+  margin-bottom: 2px;
+  border: 2px solid rgb(0, 0, 0);
+  position: flex;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.num{
+  position:flex;
+  width: 50%;
+  height: 67%;
+  right: 0;
+}
+
+.num-vt{
+  margin: 0;
+  font-size: 105px;
+  bottom: 10px;
+  transform: translate(0%, -10%);
+  font-weight: 700;
+  color: rgb(51, 49, 50) ;
+  font-family: Arial, Helvetica, sans-serif; 
+}
+
+.foto{
+  position:flex;
+  width: 50%;
+  height: 67%;
+  left: 0;
+  transform: translate(100%, -100%);
+}
+
+.foto-img{
+  position:flex;
+  width: 112px;
+  height: 112px;
+  bottom: 10px;
+  transform: translate(-1%, 5%);
+}
+
+.name{
+  position:flex;
+  width: 100%;
+  height: 34%;
+  transform: translate(0%, -200%);
+}
+
+.name-vt {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 750;
+  font-size: 28px;
+  position: flex;
+  margin: 0;
+  transform: translate(0, -7%);
+  color: rgb(51, 49, 50);
+  line-height: 1.2;
+}
+
+.vt-blanco{
+  position: flex;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  top: 0;
+}
+
+.blanco-tex{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 750;
+  font-size: 30px;
+  position: relative;
+  margin: 0;
+  top: 50%;
+  transform: translate(0%, -50%); 
+  color: rgb(51, 49, 50);
+  line-height: 1.2;
+}
+
+/* /////// ENCABEZADO Y MENU ////////*/
+
+.tex_head_center{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  font-weight: 500;
+  font-size: 30px;
+}
+
+.logo_head{
+  margin-left: 70px;
+}
+
+.icon_setting_right{
+  margin-right: 100px;
+}
+
+.set_options{
+  width:8000px;
+  height:50px;
+  background-color: #2D506C;
+  border-top: #EFB351;
+  border: 4px;
+  border-top: 5px solid rgb(237, 178, 59);
+  border-bottom: 5px solid rgb(237, 178, 59);
+  margin-left: 0px;
+  font-size: 30px;
+}
+
+.bordeador{
+  background-color: black;
+  width: 8000px;
+  height: 60px;
+  border-top:5px solid black;
+  border-bottom: 5px solid black ;
+}
+.topnav {
+  overflow: hidden;
+  margin-left: 100px;
+  
+}
+
+/* Style the links inside the navigation bar */
+.menu {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 750;
+  float: left;
+  font-size: 25px;
+  margin-bottom: 20px;
+  display: inline;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  margin-left: 10px;
+  color: antiquewhite;
+  margin-bottom: 20px;
+  position: relative;
+  transform: translate(0%, -25%);
+
+}
+
+.home_menu{
+  float: left;
+  margin-left: 100px;
+  margin-bottom: 200px;
+}
+
+.icono_tres_puntos{
+  margin-left: 50px;
+}
+
+.title-header{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 750;
+  font-size: 20px;
+  margin-top: 30px;
+  margin-right: 20px;
+  transform: translate(0%, -50%); 
+  color: rgb(25, 7, 73);
+  line-height: 1.2;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
+.footer-content h2 {
+  margin: 0;
+  font-weight: lighter;
+}
+
+.footer-content h3 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 25px;
+}
+
+
+/*-------////-----REPORTES ESTUDIANTES-----////------*/
+
+.content-report {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.section{
+  flex: 1;
+  margin: 10px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+      flex-direction: column;
+  }
+}
+
+#causa{
+  height: 200px;
+  text-align: top;
+  padding: 5px 5px;
+  font-size: 17px;
+  width: calc(100% - 12px);
+  border-radius: 5px;
+}
+
+.section form {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-colum {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.form-grupo {
+  flex: 0 0 calc(50% - 10px);
+}
+
+.form-grupo.full {
+  flex: 0 0 calc(100% - 10px);
+  margin-top: 20px;
+}
+
+.form-grupo label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-grupo input {
+  width: calc(100% - 12px);
+  padding: 6px;
+  border: 1px solid #e4e4e4;
+  border-radius: 5px;
+  font-size: 17px;
+}
+
+
+.custom-file-upload {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #2D506C;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.custom-file-upload:hover {
+  background-color: #3e6a91;
+}
+
+.form-grupo input[type="file"] {
+ display: none;
+}
+
+.form-group input[type="text"] {
+  max-width: 200px;
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  vertical-align: top;
+  text-align: left;
+}
+
+input[type="submit"] {
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #2D506C;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #3e6a91;
+}
+
+.container-reports {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 50px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.report-title {
+  margin-top: 0;
+}
+
+.report-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.report-item {
+  background-color: #f9f9f9;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.report-info {
+  font-size: 16px;
+}
+
+.report-info-title {
+  font-weight: bold;
+}
+
+.report-date {
+  font-size: 14px;
+  color: #666;
+}
+
