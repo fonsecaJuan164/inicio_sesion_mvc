@@ -20,7 +20,7 @@
   <div class="card card-outline card-warning card-ground">
     <div class="card-header text-center">
       <img class="logologin" src="vista/acme/dist/img/logo.png" alt="logo" width="100" height="100"><br>
-      <a href="../index2.html" class="h1"><b>ACME</b></a>
+      <a href="vista/acmefront/index.html" class="h1"><b>ACME</b></a>
     </div>
     <div class="card-body">
 
@@ -49,13 +49,6 @@
         </div>
 
         <div class="row">
-          <div class="col-8">
-            <div class="icheck-primary">
-              <input type="checkbox" id="remember">
-              <a href="?action=mostrarRegistro">Registrar Estudiante</a>
-            </div>
-          </div>
-          <!-- /.col -->
           <div class="col-4">
             <button type="submit" class="btn btn-primary btn-block">Iniciar</button>
           </div>
@@ -63,18 +56,27 @@
         </div>
       </form>
 
-      <div class="social-auth-links text-center mt-2 mb-3">
-        <a href="#" class="btn btn-block btn-primary">
-          <i class="fab fa-facebook mr-2"></i> Inicia con Facebook
-        </a>
-        <a href="#" class="btn btn-block btn-danger">
-          <i class="fab fa-google-plus mr-2"></i> Inicia con Google+
-        </a>
+      <div class="row">
+        <div class="col-5">
+          <div class="social-auth-links text-center">
+            <a class="btn btn-block btn-info" href="?action=mostrarRegistro"> 
+              <i class="fas fa-plus mr-2"></i>Registrarse
+            </a>
+          </div>
+        </div>  
+        <div class="col-7">
+          <div class="social-auth-links text-center">
+              <a class="btn btn-block btn-warning"href="?action=mostrarOlvidarContraseña">
+                <i class="fas fa-unlock-alt"></i> Perdí contraseña
+              </a>
+            </a>
+          </div>
+        </div>
       </div>
       <!-- /.social-auth-links -->
 
       <p class="mb-1">
-        <a href="../views/forgot-password-v2.html">Olvidé mi contraseña</a>
+     
       </p>
 
     </div>

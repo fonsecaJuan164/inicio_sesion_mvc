@@ -1,3 +1,6 @@
+<?php 
+  session_start();
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,27 +27,30 @@
     <div class="card-body">
       <p class="login-box-msg">Para cambiar sucontraseña<br>Ingresa a continuación tu contraseña actual y dos veces la nueva.</p>
       <form id="changePass">
+      <h6 class="direct-chat-timestamp float-left">Ingrese su contraseña actual</h6>
         <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="*********" name="Oldpass" class="form-control" id="Oldpass">
+          <input type="password" class="form-control"  name="Oldpass" class="form-control" id="Oldpass">
           <div class="input-group-append">
             <div class="input-group-text">
-              <span class="fas fa-key"></span>
+              <span class="fas fa-lock"></span>
             </div>
           </div>
         </div>
+        <h6 class="direct-chat-timestamp float-left">Ingrese su nueva contraseña</h6>
         <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="*********" name="newPass" class="form-control" id="newPass">
+          <input type="password" class="form-control" name="newPass" class="form-control" id="newPass">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-key"></span>
             </div>
           </div>
         </div> 
+        <h6 class="direct-chat-timestamp float-left">Ingrese su contraseña nuevamente</h6>
         <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="*********" name="newPass2" class="form-control" id="newPass2">
+          <input type="password" class="form-control"  name="newPass2" class="form-control" id="newPass2">
           <div class="input-group-append">
             <div class="input-group-text">
-              <span class="fas fa-key"></span>
+              <span class="fas fa-unlock-alt"></span>
             </div>
           </div>
         </div>
@@ -56,7 +62,7 @@
         </div>
       </form>
       <p class="mt-3 mb-1">
-        <a href="../views/forgot-password-v2.html">Olvidé mi contraseña</a>
+        <a href="forgot_password.php">Olvidé mi contraseña</a>
       </p>
     </div>
     <!-- /.login-card-body -->
@@ -80,7 +86,7 @@
     $.validator.setDefaults({
       submitHandler: function () {
         alert( "Su contraseña se ha cambiado exitosamente" );
-        window.location.href = "../views/se_perfil.html"; 
+        window.location.href = "estudiante_perfil.php"; 
       }
     });
     $('#changePass').validate({

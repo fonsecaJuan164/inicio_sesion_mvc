@@ -1,3 +1,6 @@
+<?php 
+  session_start();
+ ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -41,9 +44,12 @@
 <script>
 
   setTimeout(function(){ 
-  window.location.href = "../acmefront/index.html"; 
+  window.location.href = "/inicio_sesion_mvc"; 
   }, 2 * 1000);
   
   </script>
 </body>
 </html>
+<?php if (isset($_SESSION['usuario'])): ?>
+    <p>Bienvenido, <?= $_SESSION['usuario']['nombre'] ?> | <a href="index.php?action=logout">Cerrar Sesión</a></p>
+<?php endif; ?>

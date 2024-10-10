@@ -18,23 +18,24 @@ class ControladorEstudiante
     }
 
     // Manejar el inicio de sesión
-    public function iniciarSesion($correo, $contrasena)
+    public function iniciarSesion($correo, $passw)
     {
         try {
             // Verificar las credenciales del usuario
-            if ($this->modelo->verificarCredenciales($correo, $contrasena)) {
+            if ($this->modelo->verificarCredenciales($correo, $passw)) {
                 // Iniciar sesión si no está iniciada ya
                 if (session_status() == PHP_SESSION_NONE) {
                     session_start();
                 }
                 // Guardar el correo en la sesión
                 $_SESSION['usuario'] = $correo;
-
+             
                 // Redirigir a la página de bienvenida
                 header('Location: ./vista/acme/views/estudiante_perfil.php');
                 exit; // Detener ejecución para evitar redirecciones dobles
-            } else {
+            } else { 
                 // Redirigir al formulario de login con un mensaje de error
+                header('Location: ./vista/acme/views/estudiante_login_nook-v2.html');
                 echo 'Credenciales incorrectas';
                 exit;
             }

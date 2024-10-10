@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> Estudiante| Registra</title>
+  <title> Estudiante | Registra</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -19,7 +19,7 @@
   <div class="card card-outline card-purple">
     <div class="card-header text-center">
       <img class="logologin" src="vista/acme/dist/img/logo.png" alt="logo" width="100" height="100"><br>
-      <a href="../index2.html" class="h1"><b>ACME</b></a>
+      <a href="./" class="h1"><b>ACME</b></a>
     </div>
     <div class="card-body">
       <p class="login-box-msg"><b>Registrase como nuevo miembro</b></p>
@@ -111,6 +111,7 @@
             </div>
           </div>
         </div>
+        <!--
         <h6 class="direct-chat-timestamp float-left"><br>Repita su contraseña</h6>
         <div class="input-group mb-3">
           <input type="password" class="form-control" name="passw" placeholder="">
@@ -119,7 +120,7 @@
               <span class="fas fa-lock"></span>
             </div>
           </div>
-        </div>
+        </div>-->
 
         <div class="row">
           <div class="col-8">
@@ -137,17 +138,25 @@
           <!-- /.col -->
         </div>
       </form>
-
-      <div class="social-auth-links text-center">
-        <a href="#" class="btn btn-block btn-primary">
-          <i class="fab fa-facebook mr-2"></i>
-          Inicia con Facebook
-        </a>
-        <a href="#" class="btn btn-block btn-danger">
-          <i class="fab fa-google-plus mr-2"></i>
-          Inicia con Google+
-        </a>
+      <div class="row">
+        <div class="col-6">
+          <div class="social-auth-links text-center">
+            <a href="#" class="btn btn-block btn-primary">
+              <i class="fab fa-facebook mr-2"></i>
+              Facebook
+            </a>
+          </div>
+        </div>  
+        <div class="col-6">
+          <div class="social-auth-links text-center">
+            <a href="#" class="btn btn-block btn-danger">
+              <i class="fab fa-google-plus mr-2"></i>
+              Google
+            </a>
+          </div>
+        </div>
       </div>
+      
 
       <a href="./" class="text-center">Ya tengo una cuenta</a>
     </div>

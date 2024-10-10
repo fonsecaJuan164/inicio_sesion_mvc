@@ -22,10 +22,10 @@ if (isset($_GET['action'])) {
                 $_POST['idRol'] ?? '4',
                 $_POST['sexo'] ?? '0',
                 $_POST['edad'],
-                $_POST['sexo'],
-                $_POST['correo'],
+                $_POST['sexo'] ,
+                $_POST['correo']  ,
                 $_POST['passw'],
-                $_POST['idMesa'] ?? '2',
+                $_POST['idMesa']  ?? '2',
                 $_POST['sNVoto']?? '0'
             );
             break;
@@ -41,4 +41,52 @@ if (isset($_GET['action'])) {
 } else {
     // Si no se ha especificado ninguna acción, mostrar el formulario de inicio de sesión por defecto
     $controlador->mostrarLogin();
+}
+
+
+
+require_once 'controlador/ControladorUsuario.php';
+
+$controlador = new ControladorUsuario();
+
+if (isset($_GET['action'])) {
+    switch ($_GET['action']) {
+        case 'crear':
+            $controlador->mostrarFormularioCrear();
+            break;
+
+        case 'guardar':
+            $controlador->crear();
+            break;
+
+        case 'editar':
+            $controlador->mostrarFormularioEditar($_GET['id']);
+            break;
+
+        case 'actualizar':
+            $controlador->actualizar($_GET['id']);
+            break;
+
+        case 'eliminar':
+            $controlador->eliminar($_GET['id']);
+            break;
+
+        case 'login':
+            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                $controlador->login();
+           } else {
+                $controlador->mostrarFormularioLogin();
+            }
+            break;
+
+        case 'logout':
+            $controlador->logout();
+            break;
+
+        default:
+            $controlador->listar();
+            break;
+    }
+} else {
+    $controlador->listar();
 }

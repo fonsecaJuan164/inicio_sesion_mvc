@@ -25,23 +25,25 @@ class Estudiante
 
         // Preparar la consulta para insertar los datos del docente
         $stmt = $this->conexion->prepare("INSERT INTO  estudiante  (nombre, apellido, idCurso, idRol, idEstado,  edad ,  sexo ,  correo ,  passw ,  idMesa,  sNVoto) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-        $stmt->bind_param("ssiiissssii", $nombre, $apellido, $idCurso, $idRol, $idEstado,  $edad ,  $sexo ,  $correo ,  $passw ,  $idMesa,  $sNVoto);
+        $stmt->bind_param("ssiiissssii", $nombre, $apellido, $idCurso, $idRol, $idEstado,  $edad ,  $sexo,  $correo,  $contrasena_hashed, $idMesa, $sNVoto);
 
         // Ejecutar la consulta
-        return $stmt->execute([$nombre, $apellido, $idCurso, $idRol, $idEstado,  $edad ,  $sexo ,  $correo ,  $passw ,  $idMesa,  $sNVoto]);
+        return $stmt->execute();
     }
 
-    // Método para verificar las credenciales del docente
-    public function verificarCredenciales($correo, $contrasena)
-    {
+    // Método para verificar las credenciales del estudiante
+    public function verificarCredenciales($correo, $passw) {
         $stmt = $this->conexion->prepare("SELECT passw FROM estudiante WHERE correo = ?");
         $stmt->bind_param("s", $correo);
         $stmt->execute();
-        $stmt->bind_result($passw);
+        $stmt->bind_result($contrasena_hashed);
         $stmt->fetch();
-        
-        // Comparar directamente la cédula (contraseña) con la ingresada
-        return $contrasena === $passw;
-    }
-    
+        return password_verify($passw, $contrasena_hashed);
 }
+
+
+
+}
+
+    
+    
